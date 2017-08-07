@@ -14,4 +14,4 @@ new Vue({
   components: { App }
 })
 
-require('./my-botui-app')
+// require('./my-botui-app')

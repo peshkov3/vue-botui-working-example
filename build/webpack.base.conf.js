@@ -9,7 +9,7 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: [ './src/main.js', './src/my-botui-app.js']
   },
   output: {
     filename: '[name].js',

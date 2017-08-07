@@ -1,10 +1,18 @@
-var botui = new BotUI('my-botui-app');
+import Vue from 'vue'
+import BotUI from '../node_modules/botui/build/botui.js'
+import '../node_modules/botui/build/botui.min.css'
+import '../node_modules/botui/build/botui-theme-default.css'
+
+let botui = BotUI('my-botui-app', {
+  vue: Vue
+})
 
 botui.message.add({
   content: 'Hello World from bot!'
-});
-
-botui.message.add({
-  human: true,
-  content: 'Hello World from human!'
-});
+}).then(function () {
+  botui.message.add({
+    delay: 1000,
+    human: true,
+    content: 'Hello World from human!'
+  })
+})

@@ -10,7 +10,12 @@
     </div>
 </template>
 <script>
-   let obj = require('../my-botui-file')
+  import initBotApp from '../my-botui-app'
 
-   export default obj.default
+  export default {
+    name: 'main',
+    mounted () {
+      initBotApp()
+    }
+  }
 </script>
